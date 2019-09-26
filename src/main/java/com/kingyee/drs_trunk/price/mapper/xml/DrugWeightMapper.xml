@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间，确定方法的所在类-->
+<mapper namespace="com.kingyee.drs_trunk.price.mapper.DrugWeightMapper">
+    <resultMap id="DrugWeightEntityMap" type="com.kingyee.drs_trunk.price.entity.DrugWeightEntity">
+        <result property="id" column="id"/>
+        <result property="userId" column="userId"/>
+        <result property="searchText" column="searchText"/>
+        <result property="searchResult" column="searchResult"/>
+        <result property="drugTypeName" column="drugTypeName"/>
+        <result property="drugType" column="drugType"/>
+        <result property="drugName" column="drugName"/>
+        <result property="whetherHistoryLog" column="whetherHistoryLog"/>
+        <result property="versionName" column="versionName"/>
+        <result property="dosage" column="dosage"/>
+        <result property="deviceType" column="deviceType"/>
+        <result property="createTime" column="createTime"/>
+    </resultMap>
+
+
+    <insert id="drugWeightSave" parameterType="com.kingyee.drs_trunk.price.entity.DrugWeightEntity">
+        INSERT INTO drug_weight_log(
+                userId,
+                searchText,
+                searchResult,
+                drugTypeName,
+                drugType,
+                drugName,
+                whetherHistoryLog,
+                versionName,
+                dosage,
+                deviceType,
+                createTime
+                ) VALUES(
+                #{userId},
+                #{searchText},
+                #{searchResult},
+                #{drugTypeName},
+                #{drugType},
+                #{drugName},
+                #{whetherHistoryLog},
+                #{versionName},
+                #{dosage},
+                #{deviceType},
+                #{createTime})
+
+                    </insert>
+
+
+</mapper>

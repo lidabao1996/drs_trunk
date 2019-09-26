@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://10.10.10.254/test?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: Root_1207
+
+server:
+  port: 8088
